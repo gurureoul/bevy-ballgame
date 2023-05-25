@@ -5,12 +5,12 @@ pub mod score;
 pub mod star;
 mod systems;
 
-use crate::enemy::EnemyPlugin;
-use crate::player::PlayerPlugin;
-use crate::score::ScorePlugin;
-use crate::star::StarPlugin;
 use bevy::prelude::*;
+use enemy::EnemyPlugin;
 use events::*;
+use player::PlayerPlugin;
+use score::ScorePlugin;
+use star::StarPlugin;
 use systems::*;
 
 fn main() {
