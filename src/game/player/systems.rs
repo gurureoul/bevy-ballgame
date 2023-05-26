@@ -1,11 +1,11 @@
 use super::components::*;
-use crate::enemy::components::*;
-use crate::enemy::ENEMY_SIZE;
-use crate::events::*;
-use crate::player::*;
-use crate::score::resources::*;
-use crate::star::components::*;
-use crate::star::STAR_SIZE;
+use crate::game::enemy::components::*;
+use crate::game::enemy::ENEMY_SIZE;
+use crate::game::events::*;
+use crate::game::player::*;
+use crate::game::score::resources::*;
+use crate::game::star::components::*;
+use crate::game::star::STAR_SIZE;
 use bevy::prelude::*;
 use bevy::window::PrimaryWindow;
 

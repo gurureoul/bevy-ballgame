@@ -1,4 +1,4 @@
-use crate::events::*;
+use crate::game::events::*;
 use bevy::app::AppExit;
 use bevy::prelude::*;
 use bevy::window::PrimaryWindow;

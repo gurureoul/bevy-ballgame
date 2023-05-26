@@ -1,5 +1,5 @@
 use super::resources::*;
-use crate::events::*;
+use crate::game::events::*;
 use bevy::prelude::*;
 
 pub fn update_high_scores(

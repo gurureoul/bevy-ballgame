@@ -2,8 +2,8 @@ pub mod components;
 pub mod resources;
 mod systems;
 
-use crate::enemy::resources::*;
-use crate::enemy::systems::*;
+use crate::game::enemy::resources::*;
+use crate::game::enemy::systems::*;
 use bevy::prelude::*;
 
 pub const NUMBER_OF_ENEMIES: usize = 4;

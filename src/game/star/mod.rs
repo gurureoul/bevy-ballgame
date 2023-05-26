@@ -2,8 +2,8 @@ pub mod components;
 pub mod resources;
 mod systems;
 
-use crate::star::resources::*;
-use crate::star::systems::*;
+use crate::game::star::resources::*;
+use crate::game::star::systems::*;
 use bevy::prelude::*;
 
 pub const NUMBER_OF_STARS: usize = 10;
