@@ -31,27 +31,28 @@ pub fn handle_game_over(mut commands: Commands, mut game_over_event_reader: Even
 }
 
 pub fn transition_to_game_state(
-    mut commands: Commands,
+    mut next_app_state: ResMut<NextState<AppState>>,
     keyboard_input: Res<Input<KeyCode>>,
     app_state: Res<State<AppState>>,
 ) {
     if keyboard_input.just_pressed(KeyCode::G) {
         if app_state.0 != AppState::Game {
-            commands.insert_resource(NextState(Some(AppState::Game)));
+            next_app_state.set(AppState::Game);
             println!("Entered AppState::Game");
         }
     }
 }
 
 pub fn transition_to_main_menu_state(
-    mut commands: Commands,
+    mut next_app_state: ResMut<NextState<AppState>>,
+    mut next_sim_state: ResMut<NextState<SimulationState>>,
     keyboard_input: Res<Input<KeyCode>>,
     app_state: Res<State<AppState>>,
 ) {
     if keyboard_input.just_pressed(KeyCode::M) {
         if app_state.0 != AppState::MainMenu {
-            commands.insert_resource(NextState(Some(AppState::MainMenu)));
-            commands.insert_resource(NextState(Some(SimulationState::Paused)));
+            next_app_state.set(AppState::MainMenu);
+            next_sim_state.set(SimulationState::Paused);
             println!("Entered AppState::MainMenu");
         }
     }
