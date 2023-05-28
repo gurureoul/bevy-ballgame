@@ -2,6 +2,14 @@ use super::resources::*;
 use crate::game::events::*;
 use bevy::prelude::*;
 
+pub fn insert_score(mut commands: Commands) {
+    commands.insert_resource(Score::default());
+}
+
+pub fn remove_score(mut commands: Commands) {
+    commands.remove_resource::<Score>();
+}
+
 pub fn update_high_scores(
     mut game_over_event_reader: EventReader<GameOver>,
     mut high_scores: ResMut<HighScores>,
